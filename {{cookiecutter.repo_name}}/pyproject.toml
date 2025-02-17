@@ -102,6 +102,7 @@ ignore = [
     "S404",   # `subprocess` module is possibly insecure
     "S101",   # ideally only used in tests, not realistic for research workflow
     "N812",   # variable name should be lowercase
+    "S301",   # pickle safety not an issue internally
 ]
 
 exclude = ["tests/**/hooks/*"]
