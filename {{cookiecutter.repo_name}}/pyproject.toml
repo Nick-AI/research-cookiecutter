@@ -1,4 +1,38 @@
+[build-system]
+requires = ["setuptools>=67.7.2"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "{{ cookiecutter.package_name }}"
+version = "0.1.0"
+description = "{{ cookiecutter.description }}"
+readme = "README.md"
+authors = [{ name = "Yannik Glaser" }]
+license = { file = "LICENSE" }
+keywords = [
+    "research",
+]
+
+# Core dependencies needed for your `wvnet` package to run (e.g., for inference)
+dependencies = []
+
+classifiers = [
+    'Natural Language :: English',
+    'Programming Language :: Python :: 3',
+    'License :: OSI Approved :: MIT License',
+    'Operating System :: MacOS X',
+    'Intended Audience :: Science/Research',
+    'Development Status :: 2 - Pre-Alpha',
+]
+
+requires-python = ">=3.11"
+
+# Configuration for setuptools (the build backend)
+[tool.setuptools]
+packages = ["{{ cookiecutter.package_name }}"]
+
 [tool.ruff]
+extend-include = ["*.ipynb"]
 
 # Exclude a variety of commonly ignored directories.
 exclude = [
